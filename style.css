@@ -1,3 +1,36 @@
 #root {
   color: red;
 }
+body {
+  font-family: Arial, sans-serif;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns */
+  gap: 20px; /* Gap between grid items */
+  padding: 20px; /* Padding around grid */
+}
+
+.episode-box {
+  border: 1px solid #ddd; /* Border around each episode box */
+  padding: 10px; /* Padding inside each episode box */
+}
+
+.episode-name {
+  font-weight: bold;
+}
+
+.episode-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.episode-summary {
+  margin-top: 10px;
+}
+
+.episode-link {
+  color: blue;
+  text-decoration: underline;
+}
