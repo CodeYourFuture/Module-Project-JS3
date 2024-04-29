@@ -1,17 +1,23 @@
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(4, minmax(200px, 1fr)); /* Adjusted to show 4 cards per row */
   gap: 20px;
 }
 
 .episode-card {
   border: 1px solid #ccc;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 .episode-image {
   width: 100%;
   height: auto;
+}
+
+.episode-info {
+  flex-grow: 1;
 }
 
 .search-container {
