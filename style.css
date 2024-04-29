@@ -1,36 +1,23 @@
-#root {
-  color: red;
-}
-body {
-  font-family: Arial, sans-serif;
-}
-
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Three columns */
-  gap: 20px; /* Gap between grid items */
-  padding: 20px; /* Padding around grid */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
 }
 
-.episode-box {
-  border: 1px solid #ddd; /* Border around each episode box */
-  padding: 10px; /* Padding inside each episode box */
-}
-
-.episode-name {
-  font-weight: bold;
+.episode-card {
+  border: 1px solid #ccc;
+  padding: 10px;
 }
 
 .episode-image {
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
-.episode-summary {
-  margin-top: 10px;
+.search-container {
+  margin-bottom: 20px;
 }
 
-.episode-link {
-  color: blue;
-  text-decoration: underline;
+#searchCount {
+  margin-left: 10px;
 }

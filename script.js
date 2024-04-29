@@ -1,29 +1,56 @@
-//You can edit ALL of the code here
-function setup() {
-  const allEpisodes = getAllEpisodes();
-  makePageForEpisodes(allEpisodes);
+const rootElement = document.getElementById('root');
+const searchInput = document.getElementById('searchInput');
+const searchCount = document.getElementById('searchCount');
+
+// Fetch data from TVMaze API
+async function fetchData() {
+  const response = await fetch('https://api.tvmaze.com/shows/82/episodes');
+  const data = await response.json();
+  return data;
 }
 
-function makePageForEpisodes(episodeList) {
-  const rootElem = document.getElementById("root");
+// Render episode cards
+function renderEpisodes(episodes) {
+  rootElement.innerHTML = '';
+  episodes.forEach(episode => {
+    const episodeCard = document.createElement('div');
+    episodeCard.classList.add('episode-card');
 
-  // Loop through each episode
-  episodeList.forEach(episode => {
-    // Create HTML elements for episode details
-    const episodeDiv = document.createElement("div");
     const episodeCode = `S${episode.season.toString().padStart(2, '0')}E${episode.number.toString().padStart(2, '0')}`;
-    episodeDiv.innerHTML = `
-      <h2>${episode.name} (${episodeCode})</h2>
-      <p>Season ${episode.season}, Episode ${episode.number}</p>
-      <img src="${episode.image.medium}" alt="${episode.name}" />
+    
+    episodeCard.innerHTML = `
+      <h3>${episode.name}</h3>
+      <p>Episode Code: ${episodeCode}</p>
       <p>${episode.summary}</p>
-      <p>Source: <a href="${episode.url}"target="_blank">TVMaze.com</a></p>
-`;
-    rootElem.appendChild(episodeDiv);
-  });
+      <img class="episode-image" src="${episode.image.medium}" alt="${episode.name}">
+      <p>Season: ${episode.season} | Episode: ${episode.number}</p>
+      <p><a href="${episode.url}" target="_blank">View on TVMaze</a></p>
+    `;
 
-  // Display total number of episodes
-  rootElem.insertAdjacentHTML("beforebegin", `<p>Got ${episodeList.length} episode(s)</p>`);
+    rootElement.appendChild(episodeCard);
+  });
 }
 
-window.onload = setup;
+// Perform search and update episode display
+function performSearch(searchTerm) {
+  const filteredEpisodes = episodes.filter(episode =>
+    episode.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    episode.summary.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+  renderEpisodes(filteredEpisodes);
+  searchCount.textContent = `Displaying ${filteredEpisodes.length} / ${episodes.length} episodes`;
+}
+
+let episodes = [];
+
+// Initialize
+async function initialize() {
+  episodes = await fetchData();
+  renderEpisodes(episodes);
+
+  searchInput.addEventListener('input', function () {
+    performSearch(this.value);
+  });
+}
+
+initialize();

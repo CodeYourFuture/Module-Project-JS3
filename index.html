@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TV Show Project | NAZANIN SAEDI</title>
-    <link href="style.css" rel="stylesheet" />
-    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TV Show Project | NAZANIN SAEDI</title>
+  <link href="style.css" rel="stylesheet">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <h1>TV Show Project</h1>
+    <h2>by NAZANIN SAEDI</h2>
+  </header>
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="Search episodes...">
+    <span id="searchCount"></span>
+  </div>
+  <div id="root" class="grid-container"></div>
 
-  <body>
-    <div id="root" class="grid-container"></div>
+  <!-- Loads a provided function called getAllEpisodes() which returns all episodes -->
+  <script src="episodes.js"></script>
 
-    <!-- Loads a provided function called getAllEpisodes() which returns all episodes -->
-    <script src="episodes.js"></script>
-
-    <!-- Loads  JavaScript code -->
-    <script src="script.js"></script>
-  </body>
+  <!-- Loads JavaScript code -->
+  <script src="script.js"></script>
+</body>
 </html>
