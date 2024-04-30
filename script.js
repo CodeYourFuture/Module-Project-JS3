@@ -1,15 +1,25 @@
 const rootElement = document.getElementById('root');
 const searchInput = document.getElementById('searchInput');
 const searchCount = document.getElementById('searchCount');
+let episode = [];
+let dataFetched = false;
 
 // Fetch data from TVMaze API
 async function fetchData() {
+  if (!dataFetched) {
+    try{
   const response = await fetch('https://api.tvmaze.com/shows/82/episodes');
   const data = await response.json();
-
+  
+  episode = data;
+  dataFetched = true;
+  
+  } catch (error) {
+    throw new Error('Failed to fetch data from TXMaze API');
+  }
   return data;
 }
-
+}
 
 
 
@@ -49,12 +59,19 @@ let episodes = [];
 
 // Initialize
 async function initialize() {
-  episodes = await fetchData();
+try {
+  rootElement.innerHTML = '<p>Loading...</p>';
+
+  await fetchData();
   renderEpisodes(episodes);
 
   searchInput.addEventListener('input', function () {
     performSearch(this.value);
   });
+}catch (error){
+  //show error message
+  rootElement.innerHTML = `<p>${error.message}</p>`;
+}
 }
 
 initialize();
