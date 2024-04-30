@@ -1,17 +1,23 @@
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
   gap: 20px;
 }
 
 .episode-card {
   border: 1px solid #ccc;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 .episode-image {
   width: 100%;
   height: auto;
+}
+
+.episode-info {
+  flex-grow: 1;
 }
 
 .search-container {
@@ -20,4 +26,15 @@
 
 #searchCount {
   margin-left: 10px;
+}
+
+/* Styling for select element */
+#showSelect {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
 }
