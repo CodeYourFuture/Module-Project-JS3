@@ -5,7 +5,7 @@
 }
 
 .episode-card {
-  border: 1px solid #ccc;
+  border: 1px solid rgb(220, 207, 207);
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -32,7 +32,7 @@
 #showSelect {
   padding: 8px;
   font-size: 16px;
-  border: 1px solid #ccc;
+  border: 1px solid rgb(222, 202, 202);
   border-radius: 4px;
   margin-bottom: 10px;
   width: 100%;
