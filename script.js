@@ -67,7 +67,10 @@ function displayShows(show) {
   const showRuntime = document.createElement("p");
   showRuntime.innerHTML = "Runtime: " + show.runtime;
 
-  cardShowInfo.append(showStatus, showGenres, showRating, showRuntime);
+  const castList = document.createElement("p");
+  castList.innerHTML = "Cast: " + show._embedded.cast.map((actor) => actor.person.name).join(", ");
+
+  cardShowInfo.append(showStatus, showGenres, showRating, showRuntime, castList);
   cardInfoInner.append(showSummary, cardShowInfo);
   cardInfo.append(showName, cardInfoInner);
   cardShow.append(showImg, cardInfo);
