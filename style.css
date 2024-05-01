@@ -84,7 +84,7 @@ footer a:hover {
 }
 
 #search-input:focus {
-  border: 2px solid #f3b0f4;
+  border: 2px solid #efa1d6;
 }
 
 #navbar {
@@ -98,7 +98,7 @@ footer a:hover {
 #episode-select,
 #search-input {
   padding: 12px 20px;
-  border: 2px solid  #f46d43;
+  border: 2px solid  #f6683c;
   border-radius: 8px;
   font-size: 16px;
   width: 300px;
@@ -212,11 +212,11 @@ footer a:hover {
   background-position: 20%;
   background-repeat: no-repeat;
   background-color: #f46d43;
-  color: #eaae8e;
+  color: #eee0a1;
   padding: 60px;
   text-align: center;
   height: 7rem;
-  margin-top: 10px;
-  font-size: 60px;
-  border-radius: 6px;
+  margin-top: 20px;
+  font-size: 70px;
+  border-radius: 8px;
 }
