@@ -1,27 +1,36 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TV Show Project | NAZANIN SAEDI</title>
+    <title>TV Show Project | Nazanin SAedi </title>
     <link href="style.css" rel="stylesheet" />
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
   </head>
   <body>
     <header>
-      <h1>TV Show Project</h1>
-      <select id="showSelect">
-        select
-      </select>
-      <!-- Added select element for choosing a show -->
+      <h1 class="header-title">TV Show Project</h1>
     </header>
-    <div class="search-container">
-      <input type="text" id="searchInput" placeholder="Search episodes..." />
-      <span id="searchCount"></span>
-    </div>
-    <div id="root" class="grid-container"></div>
 
-    <!-- Loads JavaScript code -->
+    <div id="root"></div>
+
+    <!-- Template for each episode -->
+    <template id="episode-template">
+      <section class="episode-card">
+        <h2 class="episode-name"></h2>
+        <p class="episode-code"></p>
+        <div class="episode-image-container">
+          <img class="episode-image" src="" alt="" />
+        </div>
+        <p class="episode-summary"></p>
+      </section>
+    </template>
+
+    <footer></footer>
+
+    <!-- Loads a provided function called getAllEpisodes() which returns all episodes -->
+    <!-- Loads YOUR javascript code -->
     <script src="script.js"></script>
   </body>
 </html>
