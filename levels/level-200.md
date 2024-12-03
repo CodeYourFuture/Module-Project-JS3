@@ -4,7 +4,7 @@ For level 200, you are not allowed to work on the same codebase as you worked on
 
 Swap repos with a random person in your class. You do not need to coordinate your schedules.
 
-Fork their GitHub repository to your GitHub username. You will need to give it a different name (e.g. `JS3-Module-Project-Partner`), because you already have a repo named `JS3-Module-Project`.
+Fork their GitHub repository to your GitHub username. You will need to give it a different name (e.g. `Project-TV-Show-Partner`), because you already have a repo named `Project-TV-Show`.
 
 Clone their repository to your laptop.
 

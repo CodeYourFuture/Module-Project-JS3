@@ -4,7 +4,7 @@ One of the most powerful things a software engineer can do is take some data and
 
 The aim of this project is to take some data someone else has (and exposes over an API), and display it to users. The data we're using for this project is about episodes of TV shows.
 
-This project will take you multiple weeks to complete. As always, we will break down the project into levels we can deliver incrementally. You must finish each milestone before you start working on the next one (but it's ok to know what the future levels are going to be - it may help you design things). Your goal is to complete all of the levels up to and including level 500 during JS3.
+This project will take you multiple weeks to complete. As always, we will break down the project into levels we can deliver incrementally. You must finish each milestone before you start working on the next one (but it's ok to know what the future levels are going to be - it may help you design things). Your goal is to complete all of the levels up to and including level 500 during the Data Flows module.
 
 ## Data
 

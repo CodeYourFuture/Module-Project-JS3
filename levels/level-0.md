@@ -10,9 +10,9 @@ The goals of level 0 are to:
 
 ## Create your repository
 
-1. Go to https://github.com/CodeYourFuture/JS3-Module-Project
+1. Go to https://github.com/CodeYourFuture/Project-TV-Show
 2. Click on the green button: `Use this template.`
-3. Name your new repo exactly this: `JS3-Module-Project`
+3. Name your new repo exactly this: `Project-TV-Show`
 4. Do not enable `Include all branches`
 5. Click the final green button `Create repository from template`
 
@@ -39,7 +39,7 @@ The goals of level 0 are to:
 ## Completion criteria
 
 You have completed level 0 when:
-- [ ] You have a GitHub repository called `JS3-Module-Project` which is not a fork of this repo.
+- [ ] You have a GitHub repository called `Project-TV-Show` which is not a fork of this repo.
 - [ ] The `index.html` page on your GitHub project contains your name and GitHub username.
 - [ ] Your project is deployed to Netlify at `cyf-USERNAME-tv.netlify.app`.
 - [ ] Your deployed project has your name and GitHub username in its title.
